@@ -31,6 +31,6 @@ app.use((error: Error, req: Request,res: Response,next: NextFunction) => {
   // return res.status(400).json(error)
 })
 app.listen(5000, () => {
-  console.log("\n\tServer started at: http://localhost:"+process.env.API_PORT)
-  console.log("\tCheck status at: http://localhost:"+process.env.API_PORT+"/status")
+  console.log("\n\tServer started at: http://localhost:5000")
+  console.log("\tCheck status at: http://localhost:5000/status")
 })
