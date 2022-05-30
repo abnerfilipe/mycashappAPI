@@ -35,7 +35,7 @@ transactionRouter.post(
   celebrate({
     [Segments.BODY]: {
       type: Joi.string().valid('p','r').required(),
-      description: Joi.string().default(null),
+      description: Joi.string().allow(null).default(null),
       value: Joi.number().required(),
       user: Joi.string().required(),
     },
