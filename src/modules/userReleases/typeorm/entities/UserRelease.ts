@@ -1,7 +1,7 @@
 
 
-import User from '@modules/users/typeorm/entities/User';
-import Transaction from '@modules/transactions/typeorm/entities/Transaction';
+import User from '../../../../modules/users/typeorm/entities/User';
+import Transaction from '../../../../modules/transactions/typeorm/entities/Transaction';
 import {
   Column, CreateDateColumn,
   Entity, JoinColumn,

@@ -8,7 +8,6 @@
     "moduleResolution":"node",
     "baseUrl":".",
     "esModuleInterop": true,
-
     "lib": ["es6"],                           /* Specify library files to be included in the compilation. */
     // "checkJs": true,                       /* Report errors in .js files. */
     // "jsx": "preserve",                     /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
@@ -44,13 +43,13 @@
     /* Module Resolution Options */
     "paths": {
       "@config/*": [
-        "src/config/*"
+        "./src/config/*"
       ],
       "@modules/*": [
-        "src/modules/*"
+        "./src/modules/*"
       ],
       "@shared/*": [
-        "src/shared/*"
+        "./src/shared/*"
       ]
     },                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
