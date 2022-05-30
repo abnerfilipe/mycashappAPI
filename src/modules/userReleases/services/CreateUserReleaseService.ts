@@ -1,8 +1,9 @@
-import Transaction from "@modules/transactions/typeorm/entities/Transaction";
-import User from "@modules/users/typeorm/entities/User";
+import Transaction from "../../../modules/transactions/typeorm/entities/Transaction";
+import User from "../../../modules/users/typeorm/entities/User";
 import { getCustomRepository } from "typeorm";
 import UserRelease from "../typeorm/entities/UserRelease";
 import UserReleasesRepository from "../typeorm/repositories/UserReleasesRepository";
+import OperationType from "../typeorm/entities/UserRelease";
 
 interface IRequest{
   user: User;

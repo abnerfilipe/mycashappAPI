@@ -1,10 +1,10 @@
-import UserRepository from '@modules/users/typeorm/repositories/UserRepository';
-import UserRelease from "@modules/userReleases/typeorm/entities/UserRelease";
-import User from "@modules/users/typeorm/entities/User";
+import UserRepository from '../../../modules/users/typeorm/repositories/UserRepository';
+import UserRelease from "../../../modules/userReleases/typeorm/entities/UserRelease"
+import User from "../../../modules/users/typeorm/entities/User";
 import { getCustomRepository } from "typeorm";
 import Transaction, { Type } from '../typeorm/entities/Transaction';
 
-import AppError from '@shared/errors/AppError';
+import AppError from "../../../shared/errors/AppError"
 import { ITransaction, TransactionRepository } from '../typeorm/repositories/TransactionRepository';
 
 interface IRequest{

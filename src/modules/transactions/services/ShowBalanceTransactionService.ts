@@ -2,7 +2,7 @@ import { UserReleasesRepository } from './../../userReleases/typeorm/repositorie
 import { Between, getCustomRepository, In } from "typeorm";
 import { TransactionRepository } from "../typeorm/repositories/TransactionRepository";
 import { setHours,setMinutes,setSeconds } from 'date-fns';
-import AppError from '@shared/errors/AppError';
+import AppError from '../../../shared/errors/AppError';
 
 interface IRequest{ 
   user: string, 

@@ -1,6 +1,6 @@
 
-import Transaction from '@modules/transactions/typeorm/entities/Transaction';
-import User from '@modules/users/typeorm/entities/User';
+import Transaction from '../../../../modules/transactions/typeorm/entities/Transaction';
+import User from '../../../../modules/users/typeorm/entities/User';
 import { EntityRepository, In, Repository } from 'typeorm';
 import UserRelease from '../entities/UserRelease';
 

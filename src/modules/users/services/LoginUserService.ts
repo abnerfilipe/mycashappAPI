@@ -1,4 +1,4 @@
-import AppError from "@shared/errors/AppError";
+import AppError from "../../../shared/errors/AppError";
 import { hash } from "bcryptjs";
 import { randomUUID } from "crypto";
 import { getCustomRepository } from "typeorm";

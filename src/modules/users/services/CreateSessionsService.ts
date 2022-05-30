@@ -1,14 +1,14 @@
-import AppError from "@shared/errors/AppError";
+import AppError from "../../../shared/errors/AppError";
 import { compare, hash } from "bcryptjs";
 import { getCustomRepository } from "typeorm";
 import User from "../typeorm/entities/User";
 import UserRepository from "../typeorm/repositories/UserRepository";
 import { sign } from 'jsonwebtoken';
-import authConfig from "@config/auth";
+import authConfig from "../../../config/auth";
 
 
 interface IRequest{
-  email: string
+  username: string
   password: string
 }
 interface IResponse{
@@ -18,9 +18,9 @@ interface IResponse{
 
 class CreateSessionsService{
 
-  public async execute({ email, password }: IRequest): Promise<IResponse> {
+  public async execute({ username, password }: IRequest): Promise<IResponse> {
     const userRepository = getCustomRepository(UserRepository);
-    const user = await userRepository.find({email: email});
+    const user = await userRepository.findByUsername(username);
     if (!user) {
       throw new AppError("Incorrect email.",403);
     }

@@ -1,6 +1,6 @@
-import UserRelease, { OperationType } from "@modules/userReleases/typeorm/entities/UserRelease";
-import UserRepository from '@modules/users/typeorm/repositories/UserRepository';
-import AppError from '@shared/errors/AppError';
+import UserRelease, { OperationType } from "../../../modules/userReleases/typeorm/entities/UserRelease";
+import UserRepository from '../../../modules/users/typeorm/repositories/UserRepository';
+import AppError from '../../../shared/errors/AppError';
 import { getCustomRepository } from "typeorm";
 import Transaction, { Type } from '../typeorm/entities/Transaction';
 import { TransactionRepository } from "../typeorm/repositories/TransactionRepository";
