@@ -1,0 +1,8 @@
+docker run --name app-postgres \
+ --env POSTGRES_USER=postgres \
+ --env POSTGRES_PASSWORD=docker \
+ --env POSTGRES_DB=api-vendas \
+ --publish 127.0.0.1:5432:5432 \
+ --detach \
+ --restart unless-stopped \
+ postgres:13.2-alpine
