@@ -27,10 +27,8 @@ app.use((error: Error, req: Request,res: Response,next: NextFunction) => {
       status: 'error',
       message: error.message
     })
-  // return res;
-  // return res.status(400).json(error)
 })
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, '0.0.0.0', () => {
   console.log("\n\tServer started at: http://localhost:5000")
   console.log("\tCheck status at: http://localhost:5000/status")
 })
