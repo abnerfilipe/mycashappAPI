@@ -30,7 +30,7 @@ app.use((error: Error, req: Request,res: Response,next: NextFunction) => {
   // return res;
   // return res.status(400).json(error)
 })
-app.listen(process.env.API_PORT, () => {
+app.listen(process.env.API_PORT || 80, () => {
 
   console.log("\n\tServer started at: http://localhost:"+process.env.API_PORT)
   console.log("\tCheck status at: http://localhost:"+process.env.API_PORT+"/status")
