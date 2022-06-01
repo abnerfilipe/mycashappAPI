@@ -8,7 +8,7 @@ import OperationType from "../typeorm/entities/UserRelease";
 interface IRequest{
   user: User;
   transaction: Transaction;
-  operation_type: OperationType;
+  operation_type: any;
 }
 
 class CreateUserReleaseService{
