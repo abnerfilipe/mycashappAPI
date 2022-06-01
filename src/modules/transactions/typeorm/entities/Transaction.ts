@@ -1,9 +1,5 @@
 
-import {
-  Column, CreateDateColumn,
-  Entity, PrimaryGeneratedColumn,
-  UpdateDateColumn
-} from 'typeorm';
+import {Entity,PrimaryGeneratedColumn, Column, CreateDateColumn,UpdateDateColumn} from 'typeorm';
 
 export enum Type {
   PAGAMENTO = 'p',

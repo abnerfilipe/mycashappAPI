@@ -7,7 +7,7 @@ import UserReleasesRepository from "../typeorm/repositories/UserReleasesReposito
 interface IRequest{
   user: User;
   transaction: Transaction;
-  operation_type: OperationType;
+  operation_type: any;
 }
 
 class CreateUserReleaseService{
