@@ -16,6 +16,7 @@ app.use(morgan('dev'));
 
 app.use(express.json({}));
 
+app.use(express.static("public"))
 // app.use(rateLimiter);
 
 app.use(routes);
@@ -28,7 +29,7 @@ app.use((error: Error, req: Request,res: Response,next: NextFunction) => {
       message: error.message
     })
 })
-app.listen(5000, '0.0.0.0', () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("\n\tServer started at: http://localhost:5000")
   console.log("\tCheck status at: http://localhost:5000/status")
 })
