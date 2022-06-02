@@ -29,7 +29,8 @@ app.use((error: Error, req: Request,res: Response,next: NextFunction) => {
       message: error.message
     })
 })
-app.listen(process.env.PORT || 3000, () => {
-  console.log("\n\tServer started at: http://localhost:5000")
-  console.log("\tCheck status at: http://localhost:5000/status")
+app.listen(process.env.PORT || 5000, () => {
+
+  console.log("\n\tServer started at: http://localhost:"+process.env.PORT)
+  console.log("\tCheck status at: http://localhost:"+process.env.PORT+"/status")
 })
