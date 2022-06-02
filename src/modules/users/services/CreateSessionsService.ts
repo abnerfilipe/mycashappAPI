@@ -18,24 +18,24 @@ interface IResponse{
 
 class CreateSessionsService{
 
-  public async execute({ email, password }: IRequest): Promise<IResponse> {
-    const userRepository = getCustomRepository(UserRepository);
-    const user = await userRepository.find({email: email});
-    if (!user) {
-      throw new AppError("Incorrect email.",403);
-    }
-    const passwordConfirmed = await compare(password, user.password);
-    if (!passwordConfirmed) {
-      throw new AppError("Incorrect password.");
-    }
-    const token = sign({}, authConfig.jwt.secret, {
-      subject: user.id,
-      expiresIn: authConfig.jwt.expiresIn,
-    });
-    return {
-      user,
-      token
-    };
+  public async execute({ email, password }: IRequest): Promise<any> {
+    // const userRepository = getCustomRepository(UserRepository);
+    // const user = await userRepository.find({email: email});
+    // if (!user) {
+    //   throw new AppError("Incorrect email.",403);
+    // }
+    // const passwordConfirmed = await compare(password, user.password);
+    // if (!passwordConfirmed) {
+    //   throw new AppError("Incorrect password.");
+    // }
+    // const token = sign({}, authConfig.jwt.secret, {
+    //   subject: user.id,
+    //   expiresIn: authConfig.jwt.expiresIn,
+    // });
+    // return {
+    //   user,
+    //   token
+    // };
   }
 
 }

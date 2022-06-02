@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --include-dotfiles",
-    "start": "node dist/shared/http/server.js",
+    "start": "ts-node-dev -r tsconfig-paths/register --transpile-only src/shared/http/server.ts",
     "lint": "eslint . --ext .ts",
-    "lint-fix": "eslint . --ext .ts --fix",
+    "lint-fix": "es lint . --ext .ts --fix",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli  --config ormconfig.ts",
     "typeorm:create": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js --config ./ormconfig.js 'migration:create' '-n' "
   },
