@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
-    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --include-dotfiles",
+    "build": "tsc",
     "start": "ts-node-dev -r tsconfig-paths/register --transpile-only src/shared/http/server.ts",
     "lint": "eslint . --ext .ts",
     "lint-fix": "es lint . --ext .ts --fix",
