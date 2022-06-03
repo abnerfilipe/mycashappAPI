@@ -34,7 +34,7 @@ export default class UsersController {
   }
   public async update(request: Request, response: Response) {
     const { name, username, password, old_password } = request.body;
-    const user_id = request.user.id;
+    const user_id = request.params.id;
     const updateProfileService = new UpdateUserService();
     const user = await updateProfileService.execute({user_id, name, username, password,old_password });
     return response.status(200).json(classToClass(user));

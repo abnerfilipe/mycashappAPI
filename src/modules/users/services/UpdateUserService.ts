@@ -40,7 +40,6 @@ class UpdateUserService{
       }
       user.password = await hash(password, 10);
     }
-    user.name = name;
     user.username = username;
     await userRepository.save(user);
     return user;

@@ -4,11 +4,13 @@ import 'dotenv/config';
 import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
 import morgan from 'morgan';
-import 'reflect-metadata';
-import '../database';
 import routes from './routes';
+import { intializeDB } from '../database/index';
+
 
 const app = express();
+
+intializeDB();
 
 app.use(cors());
 
@@ -30,7 +32,6 @@ app.use((error: Error, req: Request,res: Response,next: NextFunction) => {
     })
 })
 app.listen(process.env.PORT || 5000, () => {
-
   console.log("\n\tServer started at: http://localhost:"+process.env.PORT)
   console.log("\tCheck status at: http://localhost:"+process.env.PORT+"/status")
 })
