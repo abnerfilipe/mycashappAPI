@@ -11,6 +11,9 @@ const controller = new TransactionController();
 transactionRouter.get(
   '/list',
  controller.index);
+transactionRouter.get(
+  '/list/user/:id',
+ controller.indexFromUser);
 
 transactionRouter.get(
   '/:id',

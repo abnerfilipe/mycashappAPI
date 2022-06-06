@@ -2,7 +2,8 @@
 
 Api desenvolvida em nodejs, typescript e typeorm juntamente com banco de dados postgres.
 
-
+Disponivel em 
+https://nameless-fjord-66404.herokuapp.com
 
 ## Comandos
 

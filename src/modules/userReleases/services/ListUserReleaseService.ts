@@ -40,7 +40,7 @@ class ListUserReleaseService {
         user: id,
         createdAt: Between(dateInital,dateFinal)
       },
-      relations: ["user", "transaction"],
+      relations: ["transaction"],
     });
   }
 }

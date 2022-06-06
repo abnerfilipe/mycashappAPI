@@ -1,10 +1,11 @@
-import AppError from "../../../../shared/errors/AppError";
-import UserRelease, { OperationType } from '../../../../modules/userReleases/typeorm/entities/UserRelease';
+import UserRelease from '@modules/userReleases/typeorm/entities/UserRelease';
+import { isSameDay } from 'date-fns';
+import { EntityRepository, getCustomRepository, Repository } from 'typeorm';
+import { OperationType } from '../../../../modules/userReleases/typeorm/entities/UserRelease';
 import User from '../../../../modules/users/typeorm/entities/User';
-import { EntityRepository, getCustomRepository, In, Repository } from 'typeorm';
+import AppError from "../../../../shared/errors/AppError";
 import Transaction, { Status, Type } from '../entities/Transaction';
 import { UserReleasesRepository } from './../../../userReleases/typeorm/repositories/UserReleasesRepository';
-import { isSameDay } from 'date-fns';
 
 export interface ITransaction{
   id?: string;

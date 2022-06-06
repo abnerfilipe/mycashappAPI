@@ -10,6 +10,7 @@ interface IRequest{
 }
 @EntityRepository(UserRelease)
 export class UserReleasesRepository extends Repository<UserRelease>{
+  
   // public async findActiveReleaseFromToday({transaction,user}:IRequest): Promise<UserRelease[]> {
   //   const existRelease = await this.find({
   //     where: {

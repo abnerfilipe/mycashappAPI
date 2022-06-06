@@ -11,6 +11,7 @@
     "lint": "eslint . --ext .ts",
     "lint-fix": "es lint . --ext .ts --fix",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli  --config ormconfig.json",
+    "typeorm:run": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js --config ./ormconfig.json 'migration:run'",
     "typeorm:create": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js --config ./ormconfig.json 'migration:create' '-n' "
   },
   "devDependencies": {

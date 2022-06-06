@@ -12,6 +12,12 @@ export default class TransactionController{
     const transaction = await listTransaction.execute();
     return response.status(200).json(transaction);
   }
+  public async indexFromUser(request: Request, response: Response): Promise<Response> {
+    const { id } = request.params;
+    const listTransaction = new ListTransactionService();
+    const transaction = await listTransaction.executeFromUser(id);
+    return response.status(200).json(transaction);
+  }
   public async show(request: Request, response: Response): Promise<Response> {
     const { id } = request.params;
     const showTransaction = new ShowTransactionService();
